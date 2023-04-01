@@ -8,7 +8,6 @@ const App = () => {
   const [knucklesPic, setKnucklesPic] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvQoaQKLWn40Qt0KwohgJMnT6rBkM7mOs8lA9UifJ2yg&usqp=CAU&ec=48600112");
   const [trainingLog, setTrainingLog] = useState('Your Ugandan Knuckles has appeared!');
 
-
   return (
       <div id={"app"} className="app">
         <div>
@@ -39,7 +38,6 @@ const App = () => {
         />
         </center>
       </div>
-      
   );
 };
 
