@@ -7,11 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.textbox {
+  text-align: left;
+}
+.body {
+  text-align: center;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 
 .console-container {
   display: flex;
@@ -42,12 +47,15 @@ button {
 
 .button--train {
   background-color: #008CBA; /* Blue */
+  text-align: center;
 }
 
 .button--feed {
   background-color: #f44336; /* Red */
+  text-align: center;
 }
 
 .button--scavenge {
   background-color: #555555; /* Dark grey */
+  text-align: center;
 }

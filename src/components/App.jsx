@@ -10,29 +10,36 @@ const App = () => {
 
 
   return (
-    <center>
-      <div id={"app"}>
-        It's time! Train your Ugandan Knuckles now!
+      <div id={"app"} className="app">
         <div>
-
+          <label htmlFor="text-input">Username: </label>
+          <input type="text" className="textbox" id="text-input" name="text-input" />
+          <pre></pre>
+          <label htmlFor="text-input">Password: </label>
+          <input type="text" className="textbox" id="text-input" name="text-input" />
+          </div>
+        <div id={"body"} className="body">
           <img src={knucklesPic} alt="Ugandan Knuckles" /><br></br>
+          It's time! Train your Ugandan Knuckles now!<pre></pre>
           Level: {ugandanKnuckles.level} <pre></pre>
           Power: {ugandanKnuckles.power} <pre></pre>
           Health: {ugandanKnuckles.health} <pre></pre>
           Wallet: {ugandanKnuckles.wallet}
         </div>
+        <center>
         <Console
           trainingLog={trainingLog}
         />
         <Button
+          knucklesPic={knucklesPic}
           setKnucklesPic={setKnucklesPic}
-          
           ugandanKnuckles={ugandanKnuckles}
           setTrainingLog={setTrainingLog}
           trainingLog={trainingLog}
         />
+        </center>
       </div>
-    </center>
+      
   );
 };
 
