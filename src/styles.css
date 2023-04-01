@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("../images/wallhaven-956958.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .textbox {
@@ -58,4 +61,26 @@ button {
 .button--scavenge {
   background-color: #555555; /* Dark grey */
   text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 100%;
+  max-width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .col {
+    width: 50%;
+    max-width: none;
+  }
 }

@@ -46,19 +46,29 @@ const Button = (props) => {
         props.ugandanKnuckles.wallet += (Math.floor(Math.random() * 10) + 1);
     }
 
-    const handleClickChain = () => {
+    const addCaptcha = () => {
+        const num1 = Math.floor(Math.random() * 100) + 1;
+        const num2 = Math.floor(Math.random() * 100) + 1;
+        const correctAnswer = num1 + num2;
+        const userAnswer = prompt(`What is ${num1} + ${num2}?`);
+        (userAnswer && parseInt(userAnswer) === correctAnswer) ? alert("Great job! that was correct!") : !addCaptcha();
+    }
+
+    const handleClickChain1 = () => {
+        addCaptcha();
         handleClick0();
         handleClick1();
     }
 
     const handleClickChain2 = () => {
+        addCaptcha();
         handleClick00();
         handleClick2();
     }
 
     return (
         <div>
-            <button onClick={handleClickChain}>Train</button>
+            <button onClick={handleClickChain1}>Train</button>
             <button onClick={handleClickChain2}>Feed</button>
             <button onClick={handleClick3}>Scavange</button>
         </div>
