@@ -1,23 +1,13 @@
-const express = require('express');
-const { Pool } = require('pg');
+import express from 'express';
+import { Pool } from 'pg';
+
 const app = express();
-const port = process.env.PORT || 3001;
 
-
-app.use(express.static('public'));
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
-  }
-  next();
-});
+const DB_HOST = process.env.DATABASE_HOST || 'dpg-cgkt4tm4dad69r4o7270-a';
 
 const pool = new Pool({
   user: 'scores_db_user',
-  host: process.env.DATABASE_HOST || 'dpg-cgkt4tm4dad69r4o7270-a',
+  host: DB_HOST,
   database: 'scores_db',
   password: 'fvlnOLMLXjtLc0clcgkgKsTXSsbFI28G',
   port: 5432,
