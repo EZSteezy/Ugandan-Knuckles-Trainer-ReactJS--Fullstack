@@ -1,10 +1,8 @@
 'use strict';
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 dotenv.config();
-import express from 'express';
-import { Pool } from 'pg';
-const { Pool } = pg;
-
+const express = require('express');
+const { Pool } = require('pg');
 const app = express();
 
 
