@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "snowpack dev",
-    "start:server": "node server.js"
+    "start:server": "node restfulExpressServer.js"
   },
   "license": "ISC",
   "devDependencies": {
