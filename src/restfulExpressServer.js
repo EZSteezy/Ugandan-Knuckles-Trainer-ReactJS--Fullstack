@@ -1,11 +1,10 @@
 'use strict';
-const dotenv = require('dotenv');
-dotenv.config();
-const { Pool } = require('pg');
-const express = require('express');
+import dotenv from 'dotenv';
+import { Pool } from 'pg';
+import express from 'express';
 const app = express();
 const port = process.env.PORT || 8000;
-const bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
