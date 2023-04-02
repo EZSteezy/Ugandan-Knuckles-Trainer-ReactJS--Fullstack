@@ -6,6 +6,7 @@ const { Pool } = require('pg');
 const app = express();
 
 const DB_HOST = process.env.DATABASE_HOST || 'dpg-cgkt4tm4dad69r4o7270-a';
+const port = process.env.PORT || 3000;
 
 const pool = new Pool({
   user: 'scores_db_user',
