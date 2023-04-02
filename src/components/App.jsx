@@ -35,11 +35,7 @@ const App = () => {
         Health: {ugandanKnuckles.health} <pre></pre>
         Wallet: {ugandanKnuckles.wallet}
       </div>
-      <div className="leaderboard">
-        <Leaderboard 
-        leaderboard={leaderboard}
-        />
-      </div>
+
       <Console
         trainingLog={trainingLog}
       />

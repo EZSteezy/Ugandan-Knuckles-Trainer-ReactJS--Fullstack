@@ -1,4 +1,6 @@
+'use strict';
 const express = require('express');
+const { Pool } = require('pg');
 const app = express();
 
 
@@ -13,14 +15,25 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/api/scores', (req, res) => {
-  const scores = [
-    { name: 'Player 1', score: 100 },
-    { name: 'Player 2', score: 200 },
-    { name: 'Player 3', score: 300 },
-  ];
-  
-  res.json(scores);
+const DB_HOST = process.env.DATABASE_HOST || 'dpg-cgkt4tm4dad69r4o7270-a';
+
+const pool = new Pool({
+  user: 'scores_db_user',
+  host: DB_HOST,
+  database: 'scores_db',
+  password: 'fvlnOLMLXjtLc0clcgkgKsTXSsbFI28G',
+  port: 5432,
+});
+
+app.get('/api/scores', (req, res, next) => {
+  pool.query('SELECT * FROM scores', (err, result) => {
+    if (err) {
+      return next(err);
+    }
+    const rows = result.rows;
+    console.log(rows);
+    return res.send(rows);
+  });
 });
 
 const PORT = process.env.PORT || 3000;
