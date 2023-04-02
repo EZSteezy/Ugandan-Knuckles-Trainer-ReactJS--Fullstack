@@ -1,7 +1,7 @@
 {
   "name": "the-answer-is-react",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start": "snowpack dev",
     "start:server": "node restfulExpressServer.js"
