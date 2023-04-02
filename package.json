@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run snowpack\"",
-    "server": "node ./src/express.cjs",
+    "start": "node ./src/express.cjs",
     "snowpack": "snowpack dev"
   },
   "license": "ISC",
