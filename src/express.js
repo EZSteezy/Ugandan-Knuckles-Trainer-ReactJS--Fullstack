@@ -1,6 +1,6 @@
 import express from 'express';
 import pg from 'pg';
-
+const port = process.env.PORT || 3000;
 const app = express();
 
 const DB_HOST = process.env.DATABASE_HOST || 'dpg-cgkt4tm4dad69r4o7270-a';
