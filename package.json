@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "snowpack dev"
+    "start": "snowpack dev",
+    "start:server": "node server.js"
   },
   "license": "ISC",
   "devDependencies": {
@@ -12,5 +13,16 @@
   "dependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
-  }
+  },
+  "description": "- Understand how to implement conditional rendering\r - Apply nested components\r - Perform external API requests\r - Use react life-cycle method: ComponentDidMount",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EZSteezy/UgandanKnucklesTrainer.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/EZSteezy/UgandanKnucklesTrainer/issues"
+  },
+  "homepage": "https://github.com/EZSteezy/UgandanKnucklesTrainer#readme"
 }
