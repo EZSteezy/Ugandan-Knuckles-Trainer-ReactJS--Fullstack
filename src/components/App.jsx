@@ -3,6 +3,7 @@ import Console from "./Console.jsx";
 import Button from "./Button.jsx";
 import Leaderboard from "./Leaderboard.jsx"
 
+
 const App = () => {
 
   const [ugandanKnuckles] = useState({ health: 1, power: 1, level: 0, wallet: 0 });
@@ -12,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     async function getScores() {
-      const response = await fetch('api/scores');
+      const response = await fetch('/api/scores');
       const data = await response.json();
       console.log(data);
       setLeaderboard(data);
