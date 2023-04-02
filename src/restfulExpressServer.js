@@ -1,6 +1,7 @@
 'use strict';
 import dotenv from 'dotenv';
-import { Pool } from 'pg';
+import pkg from 'pg';
+const { Pool } = pkg;
 import express from 'express';
 const app = express();
 const port = process.env.PORT || 8000;
