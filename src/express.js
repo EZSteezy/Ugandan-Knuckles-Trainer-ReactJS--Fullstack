@@ -21,6 +21,7 @@ app.get('/api/scores', (req, res, next) => {
     if (err) {
       return next(err);
     }
+    console.log(result);
     const rows = result.rows;
     console.log(rows);
     return res.send(rows);
