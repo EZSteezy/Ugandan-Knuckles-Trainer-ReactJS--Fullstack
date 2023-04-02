@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node ./express.js",
+    "start": "node ./src/express.js",
     "snowpack": "snowpack dev"
   },
   "license": "ISC",
