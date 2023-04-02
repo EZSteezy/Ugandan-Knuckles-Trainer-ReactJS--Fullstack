@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import { Pool } from 'pg';
+const { Pool } = pg;
 
 const app = express();
 
