@@ -4,7 +4,7 @@ const proxy = httpProxy.createProxyServer({});
 export default {
   mount: {
     public: '/',
-    src: '/build',
+    src: '/src',
   },
   routes: [
     {
