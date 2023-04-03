@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./src/express.cjs",
     "snowpack": "snowpack dev",
-    "build": "snowpack build && wait-on dist/index.js && node build/server.cjs"
+    "build": "snowpack build && wait-on build/index.js && node build/server.cjs"
   },
   "license": "ISC",
   "devDependencies": {
