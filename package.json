@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node ./express.cjs",
+    "start": "node ./server.js",
     "snowpack": "snowpack dev",
     "build": "snowpack build && npm run start"
   },

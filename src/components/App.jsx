@@ -15,7 +15,6 @@ const App = () => {
     async function getScores() {
       const response = await fetch('/api/scores');
       const data = await response.json();
-      console.log(data);
       setLeaderboard(data);
     }
     getScores();
