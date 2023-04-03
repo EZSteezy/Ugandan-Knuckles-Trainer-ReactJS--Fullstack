@@ -9,6 +9,10 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.use((req, res, next) => {
+  console.log(`${req.method} request received at ${req.url}`);
+  next();
+});
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', (req, res) => {
