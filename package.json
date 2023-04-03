@@ -21,7 +21,8 @@
     "pg": "^8.10.0",
     "pool": "^0.4.1",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^6.10.0"
   },
   "description": "- Understand how to implement conditional rendering\r - Apply nested components\r - Perform external API requests\r - Use react life-cycle method: ComponentDidMount",
   "main": "app.js",
