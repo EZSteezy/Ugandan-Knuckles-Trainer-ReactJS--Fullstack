@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./server.cjs",
     "snowpack": "snowpack dev",
-    "build": "snowpack build && npm run start"
+    "build": "snowpack build"
   },
   "license": "ISC",
   "devDependencies": {
