@@ -13,6 +13,7 @@ app.use((req, res, next) => {
   console.log(`${req.method} request received at ${req.url}`);
   next();
 });
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', (req, res) => {
@@ -26,7 +27,7 @@ const pool = new Pool({
   }
 });
 
-app.get('/api/scores', async (req, res) => {
+app.get('/scores', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM scores');
     res.send(result.rows);
