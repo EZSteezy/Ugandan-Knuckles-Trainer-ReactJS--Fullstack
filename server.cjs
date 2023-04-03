@@ -2,12 +2,21 @@ const { Pool } = require('pg');
 const express = require('express');
 const app = express();
 const router = express.Router();
+
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 const pool = new Pool({
-  user: process.env.PGUSER,
-  host: process.env.PGHOST,
-  database: process.env.PGDATABASE,
-  password: process.env.PGPASSWORD,
-  port: process.env.PGPORT,
+  user: 'postgres',
+  host: 'localhost',
+  database: 'mydatabase',
+  password: 'mysecretpassword',
+  port: 5432,
 });
 
 router.get('/scores', async (req, res) => {
@@ -25,6 +34,7 @@ router.get('/scores', async (req, res) => {
 
 app.use('/api', router);
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
