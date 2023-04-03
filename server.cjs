@@ -10,12 +10,13 @@ app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
+const HOST = 'dpg-cgkt4tm4dad69r4o7270-a'
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'mydatabase',
-  password: 'mysecretpassword',
+  user: 'scores_db_user',
+  host: HOST,
+  database: 'scores_db',
+  password: 'fvlnOLMLXjtLc0clcgkgKsTXSsbFI28G',
   port: 5432,
 });
 
