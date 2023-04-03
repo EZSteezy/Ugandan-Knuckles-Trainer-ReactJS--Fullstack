@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     async function getScores() {
-      const response = await fetch('/scores');
+      const response = await fetch('/api/scores');
       const data = await response.json();
       setLeaderboard(data);
     }

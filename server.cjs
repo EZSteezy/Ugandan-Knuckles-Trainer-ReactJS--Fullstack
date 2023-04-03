@@ -27,7 +27,7 @@ const pool = new Pool({
   }
 });
 
-app.get('/scores', async (req, res) => {
+app.get('/api/scores', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM scores');
     res.send(result.rows);
