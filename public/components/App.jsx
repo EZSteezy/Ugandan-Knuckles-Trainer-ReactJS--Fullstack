@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     async function getScores() {
-      const response = await fetch('https://ukm-server.onrender.com:10000/api/scores');
+      const response = await fetch('http://localhost:3001/api/scores');
       const data = await response.json();
       console.log(data);
       setLeaderboard(data);
